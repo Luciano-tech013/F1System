@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//DOMAIN MODEL
+model Driver {
+  id Int @id @default(autoincrement())
+  fullname String @unique 
+  birthdate DateTime
+  age Int @default(0)
+  weight Int @default(0)
+  height Int @default(0)  
+  city String
+  debut_year Int @default(0)
+  debut_team String 
+  number_of_wins Int @default(0)
+  number_of_gp Int @default(0)
+  number_of_championships Int @default(0)
+  number_of_poles Int @default(0)
+  number_of_fastest_laps Int @default(0)
+  main_sponsor String
+  team Team @relation(fields: [team_id], references: [id])
+  team_id Int
+  position String
+  image String
+}
+
+model Team {
+  id Int @id @default(autoincrement())
+  name String @unique
+  base String 
+  date_fundation DateTime
+  main_sponsor String
+  number_of_championships_won Int @default(0)
+  number_of_races_won Int @default(0)
+  number_of_poles Int @default(0)
+  number_of_races Int @default(0)
+  founder String
+  director String
+  president String
+  image String 
+  drivers Driver[]
+}

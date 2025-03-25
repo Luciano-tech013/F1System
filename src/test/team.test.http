@@ -1,0 +1,27 @@
+//GET http://localhost:3002/api/teams
+
+//GET http://localhost:3002/api/teams/8
+
+//DELETE http://localhost:3002/api/teams/2
+
+//POST http://localhost:3002/api/teams
+
+PUT http://localhost:3002/api/teams/8
+Content-Type: application/json
+
+{
+    "name": "Scueria Ferrari",
+    "base": "Maranello, Italia",
+    "date_fundation": "1949-12-23T00:00:00.000Z",
+    "main_sponsor": "HP",
+    "number_of_championships_won": 16,
+    "number_of_races_won": 238,
+    "number_of_poles": 228,
+    "number_of_races": 1010,
+    "founder": "Enzo Ferrari",
+    "director": "Mattia Binotto",
+    "president": "John Elkann",
+    "image": "https://www.formula1.com/content/fom-website/en/teams/Ferrari/_jcr_content/teamlogo.img.png/1556823280317.png"
+}
+
+

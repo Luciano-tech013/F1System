@@ -1,19 +1,23 @@
 {
-  "name": "f1analytic",
+  "name": "f1system",
   "version": "1.0.0",
-  "description": "API para sistema F1Analytic",
-  "main": "index.js",
+  "description": "API para sistema F1System",
+  "main": "./src/app.mjs",
   "scripts": {
-    "dev": "nodemon ./src/app.js",
+    "dev": "nodemon ./src/app.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luciano Torres",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.5.0",
     "cors": "^2.8.5",
-    "express": "4.21.2"
+    "express": "4.21.2",
+    "express-validator": "7.2.1",
+    "pg": "8.14.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "prisma": "^6.5.0"
   }
 }
