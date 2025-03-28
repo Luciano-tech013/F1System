@@ -1,4 +1,4 @@
-import { findManyByPosition, findUnique, create, removeById, update } from "../persistence/repository/driver.repository.mjs";
+import { findManyByPosition, findUnique, create, removeById, update } from "../persistence/repositories/driver.repository.mjs";
 import { DriverNameException, DriverNotFoundException, DriverPositionCoverException } from "./exceptions/driver.exceptions.mjs";
 import { getTeamById } from "./team.service.mjs";
 import { DRIVER_NAME_EXP, DRIVER_NOT_FOUND_EXP, DRIVER_POS_HOLDER_COVER_EXP, DRIVER_POS_RESERVE_COVER_EXP } from "../utils/messages/error/driver.error.messages.mjs";
@@ -18,7 +18,6 @@ const getByDriverId = async id => {
     return driver;
 };
 
-//TODO: Modificar el esquma de driver para poner un campo de biografia breve, numeros de campeonatos, poles position, vueltas rápidas, peso, año debut y equipo debutante. TAmbien se debe agregar una imagen del piloto
 const save = async body => {
     try {
         await validatePosition(body.team_id, body.position);
@@ -55,7 +54,7 @@ const updateById = async (id, body) => {
     }
 }
 
-//TODO: Coste O(n) al cuadrado porque llamo dos veces a hasDriver que contiene un map(). Intentar llevarlo a 0(n)
+//**Éste codigo deberia refactorizarse porque su costo computacional es alto */
 const validatePosition = async (team_id, position) => {
     const team = await getTeamById({ id: team_id, include: true });
 

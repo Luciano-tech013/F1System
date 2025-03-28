@@ -1,5 +1,5 @@
 import express from "express";
-import { getAllTeams, getByIdTeam, saveTeam, updateByIdTeam, deleteByIdTeam } from "../presentation/controllers/team.controller.mjs";
+import { getAllTeams, getByIdTeam, saveTeam, updateByIdTeam, deleteByIdTeam } from "../../controllers/team.controller.mjs";
 import { validationResult } from "express-validator";
 import { teamSchema, idSchema } from "../utils/validator/team.validators.mjs";
 

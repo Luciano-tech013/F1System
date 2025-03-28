@@ -1,5 +1,5 @@
 import express from "express";
-import { getAllDriversByPosition, getByIdDriver, saveDriver, deleteByIdDriver, updateByIdDriver } from "../presentation/controllers/driver.controller.mjs";
+import { getAllDriversByPosition, getByIdDriver, saveDriver, deleteByIdDriver, updateByIdDriver } from "../../controllers/driver.controller.mjs";
 import { validationResult } from "express-validator";
 import { positionSchema, idSchema, driverSchema } from "../utils/validator/driver.validators.mjs";
 

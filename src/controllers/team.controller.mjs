@@ -1,6 +1,6 @@
-import { getAll, getTeamById, save, updateById, deleteById } from "../../service/team.service.mjs";
-import { ContentTypeException } from "../../service/exceptions/MyException.mjs";
-import { CONTENT_TYPE_EXP } from "../../utils/messages/error/headers.error.messages.mjs";
+import { getAll, getTeamById, save, updateById, deleteById } from "../services/team.service.mjs";
+import { ContentTypeException } from "../services/exceptions/MyException.mjs";
+import { CONTENT_TYPE_EXP } from "../utils/messages/error/headers.error.messages.mjs";
 
 const HEADER_TYPE = "Content-Type"
 const APPLICATION_CONTENT = "application/json"

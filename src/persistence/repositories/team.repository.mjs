@@ -1,4 +1,4 @@
-import { prisma } from "../../config/db.mjs";
+import { prisma } from "../config/db.mjs";
 
 const findMany = async () => {
     return await prisma.team.findMany();
