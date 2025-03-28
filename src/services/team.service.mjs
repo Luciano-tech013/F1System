@@ -1,4 +1,4 @@
-import { findMany, findUnique, create, update, remove } from "../persistence/repository/team.repository.mjs";
+import { findMany, findUnique, create, update, remove } from "../persistence/repositories/team.repository.mjs";
 import { TeamNotFoundException, CantBeEliminatedTeamException, RepeatedTeamException } from "../service/exceptions/team.exceptions.mjs";
 import { CANT_BE_ELIMINATED_EXP, REPEATED_TEAM_EXP, TEAM_NOT_FOUND_EXP } from "../utils/messages/error/team.error.messages.mjs";
 

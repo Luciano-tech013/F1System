@@ -1,4 +1,4 @@
-import { prisma } from "../../config/db.mjs";
+import { prisma } from "../config/db.mjs";
 
 
 //TODO: AHora que lo pienso, tal vez esto lo podria controlar desde el frontend

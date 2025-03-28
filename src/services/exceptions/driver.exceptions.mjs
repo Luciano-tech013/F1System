@@ -1,4 +1,4 @@
-import { MyException } from "../../service/exceptions/MyException.mjs";
+import { MyException } from "./MyException.mjs";
 
 export class DriverPositionCoverException extends MyException {
     constructor(message, status) {

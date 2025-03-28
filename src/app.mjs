@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import { driver_router } from "./router/driver.routes.mjs";
-import { team_routes } from "./router/team.routes.mjs";
+import { driver_router } from "./v1/routes/driver.routes.mjs";
+import { team_routes } from "./v1/routes/team.routes.mjs";
 import { errorHandler } from "./utils/handler/error.handler.mjs";
 
 const PORT = process.env.PORT ?? 3000;
